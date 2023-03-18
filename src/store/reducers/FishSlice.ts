@@ -1,5 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice} from "@reduxjs/toolkit";
 import { IFish } from "../../models/IFish";
+
 
 
 interface FishState {
