@@ -24,7 +24,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-web": "webpack serve",
+    "build-dev": "webpack",
+    "build-prod": "webpack --node-env=production",
+    "clear": "rd /s /q dist"
   },
   "eslintConfig": {
     "extends": [
