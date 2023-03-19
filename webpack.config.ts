@@ -10,7 +10,7 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg)$/i,
         type: 'src/images',
       },
     ],
