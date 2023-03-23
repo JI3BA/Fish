@@ -23,7 +23,11 @@ module.exports = {
       {
         test: /\.(sass|less|css)$/,
         use: ['style-loader', 'css-loader']
-      }
+      },
+      {
+        test: /\.(png|jpe?g|jpg)$/i,
+        use: {loader: 'file-loader'},
+      },
     ],
   },
   resolve: {
