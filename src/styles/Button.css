@@ -1,0 +1,27 @@
+.button__slider{
+    padding: 0 15px;
+    background: transparent;
+    border: transparent;
+    transition: background .5s, color .5s;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    color: transparent;
+}
+
+.button__slider:hover{
+    background: rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.button__next{
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+.button__prev{
+    position: absolute;
+    height: 100%;
+    left: 0;
+}
