@@ -1,10 +1,10 @@
-import React, {FC, useEffect} from "react";
+import React, { FC } from "react";
 import '../../styles/Gallery.css'
-import { useAppDispatch, useAppSelector } from "../../hooks/redux";
+import { useAppSelector } from "../../hooks/redux";
+
 
 
 const Gallery: FC = () => {
-    const dispatch = useAppDispatch()
     const fishImage = useAppSelector(state => state.FishReducer.fish)
    
 

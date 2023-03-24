@@ -25,8 +25,13 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(png|jpe?g|jpg)$/i,
-        use: {loader: 'file-loader'},
+        test: /\.(png|jpe?g|gif|jp2|webp)$/i,
+        use: {loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: './assets/images'
+        }
+        },
       },
     ],
   },
@@ -36,7 +41,8 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'src/images/[name][ext]'
+    filename: '[name].js',
+    assetModuleFilename: './assets/images/[name].[ext]'
   },
   plugins: [
     new HtmlWebpackPlugin({
