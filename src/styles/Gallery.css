@@ -1,4 +1,16 @@
+.gallery{
+    display: flex;
+    justify-content: center;
+}
+
+.gallery__container{
+    display: flex;
+    justify-content: flex-start;
+}
+
 .gallery__image{
-    width: 250px;
-    height: 250px;
+    width: 1000px;
+    height: 500px;
+    flex-shrink: 0;
+    object-fit: cover;
 }
