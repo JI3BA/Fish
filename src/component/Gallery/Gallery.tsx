@@ -19,7 +19,8 @@ const Gallery: FC = () => {
         const interval = setInterval(() => {
         setActiveIndex(activeIndex === fishImage.length - 1 ? 0 : activeIndex + 1);
         setChangeSlide(true)
-        }, 10000);
+        }, 5000);
+        setChangeSlide(false)
         return () => clearInterval(interval);
     }, [activeIndex]);
 
@@ -28,13 +29,13 @@ const Gallery: FC = () => {
                 <div className="gallery__container wrapper">
                     {fishImage.map((item,index) => {
                         return(
-                            <CSSTransition in={changeSlide} classNames='slider' timeout={500} mountOnEnter unmountOnExit>
+                            <CSSTransition in={changeSlide} classNames='image__container' timeout={500} key={index}>
                                 <div className={index === activeIndex ? "image__container active" : "inactive"} key={index}>
-                                <img src={item.picture} className="gallery__image" alt={item.name} />
-                                <div className="gallery__description">
-                                    <h2 className="image__title">{item.name}</h2>
-                                    <p className="image__description">{item.description}</p>
-                                </div>
+                                    <img src={item.picture} className="gallery__image" alt={item.name} />
+                                    <div className="gallery__description">
+                                        <h2 className="image__title">{item.name}</h2>
+                                        <p className="image__description">{item.description}</p>
+                                    </div>
                                 </div>
                             </CSSTransition>
                         )
@@ -45,7 +46,11 @@ const Gallery: FC = () => {
                         setChangeSlide(true)
                         }
                     }>{'<'}</Button>
-                    <Button className="button__slider button__next" onClick={() =>  setActiveIndex(activeIndex === fishImage.length - 1 ? 0 : activeIndex + 1)}>{'>'}</Button>
+                    <Button className="button__slider button__next" onClick={() => {
+                        setActiveIndex(activeIndex === fishImage.length - 1 ? 0 : activeIndex + 1)
+                        setChangeSlide(true)
+                        }
+                    }>{'>'}</Button>
                 </div>
             </div>
     )
