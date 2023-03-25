@@ -21,6 +21,14 @@
     width: 100%;
 }
 
+.active {
+    display: flex;
+}
+  
+.inactive {
+    display: none;
+}
+
 .gallery__image{
     width: 1440px;
     object-fit: cover;
@@ -31,18 +39,18 @@
     position: absolute;
     bottom: 0;
     padding: 15px 45px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    color: #000000;
+    color: #ffffff;
 }
 
 .image__title{
     margin: 5px 0;
     font-size: 36px;
     font-weight: 700;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid #ffffff;
 }
 
 .image__description{
