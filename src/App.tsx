@@ -3,7 +3,6 @@ import Header from './component/Header/Header';
 import Gallery from './component/Gallery/Gallery';
 import { Provider } from 'react-redux';
 import { setupStore } from './store';
-
 import './App.css';
 
 const store = setupStore()

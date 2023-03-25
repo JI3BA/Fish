@@ -29,6 +29,21 @@
     display: none;
 }
 
+.image__container-enter {
+    opacity: 0;
+}
+.image__container-enter-active {
+    opacity: 1;
+    transition: opacity .5s;
+}
+.image__container-exit {
+    opacity: 1;
+}
+.image__container-exit-active {
+    opacity: 0;
+    transition: opacity .5s;
+}
+
 .gallery__image{
     width: 1440px;
     object-fit: cover;
