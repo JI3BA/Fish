@@ -19,8 +19,8 @@ const Gallery: FC = () => {
         const interval = setInterval(() => {
         setActiveIndex(activeIndex === fishImage.length - 1 ? 0 : activeIndex + 1);
         setChangeSlide(true)
-        }, 5000);
-        setChangeSlide(false)
+        }, 10000);
+        setTimeout(() => setChangeSlide(false), 1000)
         return () => clearInterval(interval);
     }, [activeIndex]);
 
@@ -29,7 +29,7 @@ const Gallery: FC = () => {
                 <div className="gallery__container wrapper">
                     {fishImage.map((item,index) => {
                         return(
-                            <CSSTransition in={changeSlide} classNames='image__container' timeout={500} key={index}>
+                            <CSSTransition in={changeSlide} classNames='image__container' timeout={1000} key={index}>
                                 <div className={index === activeIndex ? "image__container active" : "inactive"} key={index}>
                                     <img src={item.picture} className="gallery__image" alt={item.name} />
                                     <div className="gallery__description">

@@ -23,6 +23,7 @@
 
 .active {
     display: flex;
+
 }
   
 .inactive {
@@ -60,39 +61,12 @@
     font-weight: 500;
 }
 
-/* .image__container-enter{
-    opacity: 1;
-}
-
-.image__container-enter-active{
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.image__container-exit{
-    opacity: 0;
-}
-
-.image__container-exit-active{
-    opacity: 1;
-    transition: opacity 1s ease-out;
-} */
-
 .image__container-enter{
-    transform: translateX(100%);
+    opacity: 0;
 }
 
 .image__container-enter-active{
-    transform: translateX(-100%);
-    transition: transform .5s;
-}
-
-.image__container-exit{
-    transform: translateX(100%);
-}
-
-.image__container-exit-active{
-    transform: translateX(0);
-    transition: transform .5s;
+    opacity: 1;
+    transition: opacity 1s;
 }
 
