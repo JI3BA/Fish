@@ -1,0 +1,81 @@
+.menu{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.menu__container{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu__card{
+    max-width: 400px;
+    width: 100%;
+    margin: 10px 0;
+    color: #061068;
+    border: 1px solid #949494;
+    box-shadow: 5px 5px 5px #061068;
+}
+
+.menu__picture{
+    max-width: 400px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.menu__name{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.menu__description{
+    padding: 5px 15px 15px 15px;
+}
+
+.menu__text{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.menu__text--bold{
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.menu__price{
+    padding: 5px 0;
+}
+
+.menu__button{
+    padding: 10px 20px;
+    border-radius: 2px;
+    background: #061068;
+    border: 1px solid transparent;
+    color: #ffffff;
+    transform: scale(1);
+    cursor: pointer;
+    transition: transform .5s, background 1s;
+}
+
+.menu__button:hover{
+    background: #ffffff;
+    border: 1px solid #061068;
+    color: #061068;
+}
+
+.menu__button:active{
+    transform: scale(0.95);
+}

@@ -1,6 +1,7 @@
 import React, { FC, useState, useEffect } from "react";
 import '../../styles/Gallery.css';
 import '../../styles/Button.css';
+import '../../styles/Main.css';
 import { useAppSelector } from "../../hooks/redux";
 import Button from "../Button/Button";
 import { CSSTransition } from "react-transition-group";
@@ -26,7 +27,8 @@ const Gallery: FC = () => {
 
     return(
             <div className="gallery">
-                <div className="gallery__container wrapper">
+                <div className="gallery__container">
+                    <h1 className="title__component gallery__title">Gallery</h1>
                     {fishImage.map((item,index) => {
                         return(
                             <CSSTransition in={changeSlide} classNames='image__container' timeout={1000} key={index}>
