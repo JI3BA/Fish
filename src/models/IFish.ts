@@ -3,5 +3,6 @@ export interface IFish {
     name: string,
     description: string,
     weight: number,
-    picture: string
+    picture: string,
+    price: number,
 }
