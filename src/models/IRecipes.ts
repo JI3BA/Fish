@@ -3,4 +3,5 @@ export interface IRecipes {
     name: string,
     picture: string,
     ingredients: string[],
+    time: string
 }
