@@ -13,7 +13,7 @@ const Header: FC = () => {
                         <path className='header__logo' d="M18 11H18.001" stroke="#ffffff" strokeLinecap="round" strokeWidth="2"/>
                     </svg>
                 </a>
-                <a href="#about-us" className="header__link">About us</a>
+                <a href="#about-us" className="header__link">Recipes</a>
                 <a href="#contacts" className="header__link">Contacts</a>
             </div>
         </div>

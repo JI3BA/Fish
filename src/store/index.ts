@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import FishReducer from '../store/reducers/FishSlice'
+import FishRecipes from "./reducers/FishRecipes";
 
 const rootReducer = combineReducers({
-    FishReducer
+    FishReducer,
+    FishRecipes,
 })
 
 export const setupStore = () => {
