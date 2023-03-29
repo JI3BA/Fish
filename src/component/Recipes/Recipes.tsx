@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Button from "../Button/Button";
 import '../../styles/Recipes.css'
 import '../../styles/Menu.css'
 import { useAppSelector } from "../../hooks/redux";   
