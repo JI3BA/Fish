@@ -1,20 +1,22 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IRecipes } from "../../models/IRecipes";
 
 interface RecipeState {
-    recipe: null | IRecipes
+    recipe: null | IRecipes[]
 }
 
 const initialState: RecipeState = {
     recipe: null
 }
 
-export const openModalRecipe = createSlice({
+export const ModalDataRecipe = createSlice({
     name: 'recipe',
     initialState,
     reducers: {
-
+        addDataModal: (state, action: PayloadAction<IRecipes[]>): void => {
+            state.recipe = action.payload
+        }
     }
 })
 
-export default openModalRecipe.reducer
+export default ModalDataRecipe.reducer

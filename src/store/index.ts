@@ -1,10 +1,14 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import FishReducer from '../store/reducers/FishSlice'
 import FishRecipes from "./reducers/FishRecipes";
+import ModalSlice from "./reducers/ModalSlice";
+import ModalRecipes from "./reducers/ModalRecipes";
 
 const rootReducer = combineReducers({
     FishReducer,
     FishRecipes,
+    ModalSlice,
+    ModalRecipes,
 })
 
 export const setupStore = () => {

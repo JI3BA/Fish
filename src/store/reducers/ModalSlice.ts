@@ -12,11 +12,11 @@ export const isModal = createSlice({
     name: 'modal',
     initialState,
     reducers: {
-        openModal: (state, action): void => {
+        openModal: (state): void => {
             state.isModal = true
         },
-        closeModal: (state, action): void => {
-            state.isModal = true
+        closeModal: (state): void => {
+            state.isModal = false
         }
     }
 })
