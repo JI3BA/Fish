@@ -1,6 +1,7 @@
 {
   "name": "fish-shop",
   "version": "0.1.0",
+  "homepage": "https://ji3ba.github.io/Fish/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
@@ -13,7 +14,6 @@
     "@types/react-dom": "^18.0.11",
     "@types/react-transition-group": "^4.4.5",
     "autoprefixer": "10.4.5",
-    "gh-pages": "^5.0.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
@@ -27,7 +27,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-webpack": "webpack serve"
+    "start-webpack": "webpack serve",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
