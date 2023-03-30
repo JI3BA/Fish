@@ -4,10 +4,34 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.8);
     z-index: 5;
     cursor: pointer;
     color: #061068;
+}
+
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-enter-active {
+    opacity: 1;
+    background: rgba(0,0,0,0.8);
+    transition: opacity 1s, background 1s;
+}
+
+.modal-enter-done{
+    background: rgba(0,0,0,0.8);
+}
+
+.modal-exit {
+    opacity: 1;
+    background: rgba(0,0,0,0.8);
+}
+
+.modal-exit-active {
+    opacity: 0;
+    background: transparent;
+    transition: opacity 1s, background 1s;
 }
 
 .modal__container{
@@ -65,7 +89,7 @@
     transform: scale(.9);
 }
 
-.modal_close--cross{
+.modal__close--cross{
     position: absolute;
     top: 10px;
     right: 20px;
@@ -76,10 +100,10 @@
     transition: color .5s, transform .5s;
 }
 
-.modal_close--cross:hover{
+.modal__close--cross:hover{
     color: #ffffff;
 }
 
-.modal_close--cross:active{
+.modal__close--cross:active{
     transform: scale(.95);
 }

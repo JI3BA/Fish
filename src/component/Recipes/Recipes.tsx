@@ -1,6 +1,7 @@
 import { FC } from "react";
 import '../../styles/Recipes.css'
 import '../../styles/Menu.css'
+import '../../styles/ModalRecipes.css'
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";   
 import { isModal } from "../../store/reducers/ModalSlice";
 import { IRecipes } from "../../models/IRecipes";
@@ -12,6 +13,7 @@ const Recipes: FC = () => {
     const dispatch = useAppDispatch()
     const { openModal } = isModal.actions
     const { addDataModal } = ModalDataRecipe.actions
+
 
     const addModalRecipe = (id: IRecipes['id']) => {
         dispatch(addDataModal(recipesFist.filter(item => item.id === id)))
