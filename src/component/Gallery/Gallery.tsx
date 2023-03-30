@@ -21,7 +21,7 @@ const Gallery: FC = () => {
         setActiveIndex(activeIndex === fishImage.length - 1 ? 0 : activeIndex + 1);
         setChangeSlide(true)
         }, 10000);
-        setTimeout(() => setChangeSlide(false), 1000)
+        setTimeout(() => setChangeSlide(false), 500)
         return () => clearInterval(interval);
     }, [activeIndex]);
 
