@@ -74,6 +74,12 @@
     }
 }
 
+.recipes__time{
+    font-size: 28px;
+    font-weight: 700;
+    font-style: italic;
+}
+
 .ingredients__item{
     font-style: 22px;
     font-weight: 500;

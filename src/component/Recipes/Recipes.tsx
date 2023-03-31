@@ -40,6 +40,7 @@ const Recipes: FC = () => {
                                                 )
                                             })}
                                         </div>
+                                        <p className="recipes__time"><span style={{fontStyle: 'normal'}}>Cooking time: </span>{item.time}</p>
                                     </div>
                                 </div>
                                 )

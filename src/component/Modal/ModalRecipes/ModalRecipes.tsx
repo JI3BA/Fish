@@ -28,6 +28,7 @@ const ModalRecipes = () => {
                                             )
                                         })}
                                 </div>
+                                <p className="modal__time recipes__time"><span style={{fontStyle: 'normal'}}>Cooking time: </span>{recipeFish[0].time}</p>
                                 <Button className='modal__close' onClick={() => dispatch(closeModal())}>Close</Button>
                                 <p className="modal__close--cross" onClick={() => dispatch(closeModal())}>✖</p>
                             </div>
