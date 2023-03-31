@@ -3,7 +3,7 @@ import Header from './component/Header/Header';
 import { Provider } from 'react-redux';
 import { setupStore } from './store';
 import './App.css';
-import Main from './component/Main/Main';
+import Main from './pages/Main/Main';
 
 const store = setupStore()
 

@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import Gallery from '../Gallery/Gallery'
+import Gallery from '../../component/Gallery/Gallery'
 import '../../styles/Main.css'
-import Menu from '../Menu/Menu'
-import Recipes from '../Recipes/Recipes'
+import Menu from '../../component/Menu/Menu'
+import Recipes from '../../component/Recipes/Recipes'
 
 const Main: FC = () => {
     return(
