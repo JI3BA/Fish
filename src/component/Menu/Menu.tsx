@@ -27,7 +27,7 @@ const Menu: FC = () => {
                     })}
                 </div>
             </div>
-            <div className='basket'>
+            <a href="/basket" className='basket'>
                 <svg version="1.1" className='basket__area' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="50px" height="50px" viewBox="0 0 510 510" xmlSpace="preserve">
                 <g>
@@ -42,7 +42,7 @@ const Menu: FC = () => {
                 <div className='basket__circle'>
                     <p className="basket__amount">1</p>
                 </div>
-            </div>
+            </a>
         </div>
     )
 }

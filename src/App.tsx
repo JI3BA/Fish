@@ -1,17 +1,19 @@
-import React from 'react';
-import Header from './component/Header/Header';
 import { Provider } from 'react-redux';
 import { setupStore } from './store';
 import './App.css';
-import Main from './pages/Main/Main';
+import Shop from './pages/Shop/Shop';
+import { Routes, Route } from 'react-router-dom';
+import Basket from './pages/Basket/Basket';
 
 const store = setupStore()
 
 function App() {
   return (
     <Provider store={store}>
-        <Header />
-        <Main />
+      <Routes>
+        <Route path='/Fish' element={<Shop />}/>
+        <Route path='/Basket' element={<Basket />}/>
+      </Routes>
     </Provider>
   )
 }

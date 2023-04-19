@@ -37,6 +37,11 @@
     padding: 15px;
 }
 
+.recipes__title{
+    display: inline-flex;
+    flex-direction: column;
+}
+
 .recipes__name{
     font-size: 28px;
     font-weight: 700;
@@ -52,7 +57,7 @@
 
 @keyframes line-inactive {
     from{
-        width: 50%;
+        width: 100%;
     }
     to{
         width: 0;
@@ -60,7 +65,7 @@
 }
 
 .recipes__card:hover .recipes__line{
-    width: 50%;
+    width: 100%;
     animation: line-active;
     animation-duration: 1s;
 }
@@ -70,7 +75,7 @@
         width: 0;
     }
     to{
-        width: 50%;
+        width: 100%;
     }
 }
 

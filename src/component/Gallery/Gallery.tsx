@@ -23,7 +23,7 @@ const Gallery: FC = () => {
         }, 10000);
         setTimeout(() => setChangeSlide(false), 500)
         return () => clearInterval(interval);
-    }, [activeIndex]);
+    }, [activeIndex, fishImage]);
 
     return(
             <div className="gallery">

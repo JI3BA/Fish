@@ -31,8 +31,11 @@ const Recipes: FC = () => {
                                 <div className='recipes__card' key={index} onClick={() => addModalRecipe(index)}>
                                     <img src={item.picture} className='recipes__picture' alt={item.name}/>
                                     <div className="recipes__description">
-                                        <h3 className='recipes__name'>{item.name}</h3>
-                                        <p className="recipes__line"></p>
+                                        <div className="recipes__title">
+                                            <h3 className='recipes__name'>{item.name}</h3>
+                                            <p className="recipes__line"></p>
+                                        </div>
+        
                                         <div className="recipes__ingredients">
                                             {item.ingredients.map((item,index) => {
                                                 return(
