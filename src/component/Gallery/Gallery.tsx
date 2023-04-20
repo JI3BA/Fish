@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from "react";
+import { FC, useState, useEffect } from "react";
 import '../../styles/Gallery.css';
 import '../../styles/Button.css';
 import '../../styles/Main.css';
@@ -26,7 +26,7 @@ const Gallery: FC = () => {
     }, [activeIndex, fishImage]);
 
     return(
-            <div className="gallery">
+            <div className="gallery" id="gallery">
                 <div className="gallery__container">
                     <h1 className="title__component gallery__title">Gallery</h1>
                     {fishImage.map((item,index) => {

@@ -80,7 +80,7 @@
     transform: scale(0.95);
 }
 
-.basket{
+.cart__link{
     position: fixed;
     top: 20px;
     right: 40px;
@@ -98,20 +98,20 @@
     transition: box-shadow .5s, transform .5s;
 }
 
-.basket__item{
+.cart__item{
     padding: 20px;
     fill: #061068
 }
 
-.basket:hover{
+.cart__link:hover{
     box-shadow: 0 0 10px 5px #061068;
 }
 
-.basket:active{
+.cart__link:active{
     transform: scale(.95);
 }
 
-.basket__circle{
+.cart__circle{
     position: absolute;
     top: -12px;
     right: -8px;
@@ -125,7 +125,7 @@
     border-radius: 50%;
 }
 
-.basket__amount{
+.cart__amount{
     font-size: 22px;
     font-weight: 600;
     color: #ffffff;

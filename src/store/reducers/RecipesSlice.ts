@@ -59,7 +59,7 @@ const initialState: RecipesState = {
     },
 ]}
 
-export const FishRecipes = createSlice({
+export const RecipesSlice = createSlice({
     name: 'recipes',
     initialState,
     reducers: {
@@ -67,4 +67,4 @@ export const FishRecipes = createSlice({
     }
 })
 
-export default FishRecipes.reducer
+export default RecipesSlice.reducer

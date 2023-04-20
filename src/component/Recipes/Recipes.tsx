@@ -5,14 +5,14 @@ import '../../styles/ModalRecipes.css'
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";   
 import { isModal } from "../../store/reducers/ModalSlice";
 import { IRecipes } from "../../models/IRecipes";
-import { ModalDataRecipe } from "../../store/reducers/ModalRecipes";
+import { ModalRecipesSlice } from "../../store/reducers/ModalRecipesSlice";
 import ModalRecipes from "../Modal/ModalRecipes/ModalRecipes";
 
 const Recipes: FC = () => {
     const recipesFist = useAppSelector(state => state.FishRecipes.recipes)
     const dispatch = useAppDispatch()
     const { openModal } = isModal.actions
-    const { addDataModal } = ModalDataRecipe.actions
+    const { addDataModal } = ModalRecipesSlice.actions
 
 
     const addModalRecipe = (id: IRecipes['id']) => {

@@ -11,9 +11,12 @@
 .wrapper{
     max-width: 1440px;
     width: 100%;
+}
+
+.header__navigation{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .header__link{

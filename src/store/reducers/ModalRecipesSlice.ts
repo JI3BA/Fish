@@ -9,7 +9,7 @@ const initialState: RecipeState = {
     recipe: null
 }
 
-export const ModalDataRecipe = createSlice({
+export const ModalRecipesSlice = createSlice({
     name: 'recipe',
     initialState,
     reducers: {
@@ -19,4 +19,4 @@ export const ModalDataRecipe = createSlice({
     }
 })
 
-export default ModalDataRecipe.reducer
+export default ModalRecipesSlice.reducer
