@@ -1,11 +1,15 @@
 import { FC } from 'react'
-import { useAppSelector } from '../../hooks/redux'
+import { useAppSelector, useAppDispatch } from '../../hooks/redux'
+import CartSlice from '../../store/reducers/CartSlice'
 import Button from '../Button/Button'
 import '../../styles/Menu.css'
 import '../../styles/Main.css'
 
 const Menu: FC = () => {
-    const fishMenu = useAppSelector(state => state.FishReducer.fish)
+    const fishMenu = useAppSelector(state => state.FishSlice.fish)
+    const cart = useAppSelector(state => state.CartSlice.cart)
+    const dispatch = useAppDispatch()
+    const { addFish } = CartSlice.actions
 
     return (
         <div className="menu" id='menu'>
@@ -20,7 +24,7 @@ const Menu: FC = () => {
                                     <h3 className='menu__name'>{item.name}</h3>
                                     <p className="menu__text menu__weight">weight: <span className='menu__text--bold'>{item.weight}g</span></p>
                                     <p className="menu__text menu__price">price: <span className='menu__text--bold'>{item.price}$</span></p>
-                                    <Button className='menu__text menu__button'>Add to Basket</Button>
+                                    <Button className='menu__text menu__button' onClick={() => dispatch(addFish(item))}>Add to Basket</Button>
                                 </div>
                             </div>
                         )

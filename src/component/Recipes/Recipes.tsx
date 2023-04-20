@@ -9,14 +9,14 @@ import { ModalRecipesSlice } from "../../store/reducers/ModalRecipesSlice";
 import ModalRecipes from "../Modal/ModalRecipes/ModalRecipes";
 
 const Recipes: FC = () => {
-    const recipesFist = useAppSelector(state => state.FishRecipes.recipes)
+    const recipesFish = useAppSelector(state => state.RecipesSlice.recipes)
     const dispatch = useAppDispatch()
     const { openModal } = isModal.actions
     const { addDataModal } = ModalRecipesSlice.actions
 
 
     const addModalRecipe = (id: IRecipes['id']) => {
-        dispatch(addDataModal(recipesFist.filter(item => item.id === id)))
+        dispatch(addDataModal(recipesFish.filter(item => item.id === id)))
         dispatch(openModal())
     }
 
@@ -26,7 +26,7 @@ const Recipes: FC = () => {
                 <div className="recipes__container wrapper">
                     <h1 className="title__component recipes__title">Recipes</h1>
                     <div className='card__container'>
-                        {recipesFist.map((item,index) => {
+                        {recipesFish.map((item,index) => {
                             return(
                                 <div className='recipes__card' key={index} onClick={() => addModalRecipe(index)}>
                                     <img src={item.picture} className='recipes__picture' alt={item.name}/>

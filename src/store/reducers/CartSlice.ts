@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IFish } from "../../models/IFish";
 
 interface CartState {
@@ -14,7 +14,9 @@ export const CartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
-        
+        addFish: (state, action: PayloadAction<IFish>): void => {
+            state.cart?.push(action.payload)
+        }
     }
 })
 

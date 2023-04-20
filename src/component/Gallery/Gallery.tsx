@@ -11,7 +11,7 @@ import { CSSTransition } from "react-transition-group";
 
 
 const Gallery: FC = () => {
-    const fishImage = useAppSelector(state => state.FishReducer.fish)
+    const fishImage = useAppSelector(state => state.FishSlice.fish)
 
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const [changeSlide, setChangeSlide] = useState<boolean>(false)

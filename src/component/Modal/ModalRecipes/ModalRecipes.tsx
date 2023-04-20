@@ -7,7 +7,7 @@ import { CSSTransition } from "react-transition-group";
 
 
 const ModalRecipes = () => {
-    const recipeFish = useAppSelector(state => state.ModalRecipes.recipe)
+    const recipeFish = useAppSelector(state => state.ModalRecipesSlice.recipe)
     const modal = useAppSelector(state => state.ModalSlice.isModal)
     const dispatch = useAppDispatch()
     const { closeModal } = isModal.actions
