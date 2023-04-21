@@ -5,4 +5,5 @@ export interface IFish {
     weight: number,
     picture: string,
     price: number,
+    isCart: boolean
 }

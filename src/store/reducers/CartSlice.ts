@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IFish } from "../../models/IFish";
 
 interface CartState {
-    cart?: IFish[]
+    cart: IFish[]
 }
 
 
@@ -16,7 +16,7 @@ export const CartSlice = createSlice({
     reducers: {
         addFish: (state, action: PayloadAction<IFish>): void => {
             state.cart?.push(action.payload)
-        }
+        },
     }
 })
 

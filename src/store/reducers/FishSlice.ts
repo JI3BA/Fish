@@ -1,4 +1,4 @@
-import { createSlice} from "@reduxjs/toolkit";
+import { PayloadAction, createSlice} from "@reduxjs/toolkit";
 import { IFish } from "../../models/IFish";
 import salmon from '../../images/salmon.jpg';
 import tuna from '../../images/tuna.jpg';
@@ -21,6 +21,7 @@ const initialState: FishState = {
         weight: 100,
         picture: salmon,
         price: 19.99,
+        isCart: false,
     },
     {
         id: 1,
@@ -29,6 +30,7 @@ const initialState: FishState = {
         weight: 100,
         picture: tuna,
         price: 24.99,
+        isCart: false,
     },
     {
         id: 2,
@@ -37,6 +39,7 @@ const initialState: FishState = {
         weight: 100,
         picture: pollock,
         price: 15.99,
+        isCart: false,
     },
     {
         id: 3,
@@ -45,6 +48,7 @@ const initialState: FishState = {
         weight: 100,
         picture: mackerel,
         price: 17,
+        isCart: false,
     },
     {
         id: 4,
@@ -53,6 +57,7 @@ const initialState: FishState = {
         weight: 100,
         picture: trout,
         price: 11.99,
+        isCart: false,
     },
     {
         id: 5,
@@ -61,6 +66,7 @@ const initialState: FishState = {
         weight: 100,
         picture: halibut,
         price: 26.99,
+        isCart: false,
     },
 ]}
 
@@ -68,7 +74,9 @@ export const FishSlice = createSlice({
     name: 'fish',
     initialState,
     reducers: {
-
+        // changeIsCart: (state, action: PayloadAction<boolean>): void => {
+        //     state.fish.find(item => item.isCart = !action.payload)
+        // }
     }
 })
 

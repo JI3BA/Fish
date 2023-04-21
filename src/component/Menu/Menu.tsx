@@ -1,15 +1,24 @@
 import { FC } from 'react'
 import { useAppSelector, useAppDispatch } from '../../hooks/redux'
-import CartSlice from '../../store/reducers/CartSlice'
+import { CartSlice } from '../../store/reducers/CartSlice'
 import Button from '../Button/Button'
 import '../../styles/Menu.css'
 import '../../styles/Main.css'
+import { IFish } from '../../models/IFish'
+import { Link } from 'react-router-dom'
+//import { FishSlice } from '../../store/reducers/FishSlice'
 
 const Menu: FC = () => {
     const fishMenu = useAppSelector(state => state.FishSlice.fish)
     const cart = useAppSelector(state => state.CartSlice.cart)
     const dispatch = useAppDispatch()
     const { addFish } = CartSlice.actions
+    //const { changeIsCart } = FishSlice.actions
+
+    const addInOrder = (item: IFish): void => {
+        dispatch(addFish(item))
+        //dispatch(changeIsCart(item.isCart))
+    }
 
     return (
         <div className="menu" id='menu'>
@@ -24,14 +33,16 @@ const Menu: FC = () => {
                                     <h3 className='menu__name'>{item.name}</h3>
                                     <p className="menu__text menu__weight">weight: <span className='menu__text--bold'>{item.weight}g</span></p>
                                     <p className="menu__text menu__price">price: <span className='menu__text--bold'>{item.price}$</span></p>
-                                    <Button className='menu__text menu__button' onClick={() => dispatch(addFish(item))}>Add to Basket</Button>
+                                    {/* {!item.isCart ? <Button className='menu__text menu__button' onClick={() => addInOrder(item)}>Add to Cart</Button>
+                                            : <Button className='menu__text menu__button' >In Cart</Button>} */}
+                                    <Button className='menu__text menu__button' onClick={() => addInOrder(item)}>Add to Cart</Button>
                                 </div>
                             </div>
                         )
                     })}
                 </div>
             </div>
-            <a href="/order" className='cart__link'>
+            <Link to="/order" className='cart__link'>
                 <svg version="1.1" className='cart__area' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="50px" height="50px" viewBox="0 0 510 510" xmlSpace="preserve">
                 <g>
@@ -43,10 +54,11 @@ const Menu: FC = () => {
                     </g>
                 </g>
                 </svg>
-                <div className='cart__circle'>
-                    <p className="cart__amount">1</p>
-                </div>
-            </a>
+                {cart && <div className='cart__circle'>
+                            <p className="cart__amount">{cart.length}</p>
+                        </div>
+                }
+            </Link>
         </div>
     )
 }
