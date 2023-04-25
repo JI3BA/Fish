@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Fish/static/css/main.138092a2.css",
-    "main.js": "/Fish/static/js/main.c792ff3f.js",
+    "main.css": "/Fish/static/css/main.c5aa7cb8.css",
+    "main.js": "/Fish/static/js/main.5e1816ea.js",
     "static/media/halibut.jpg": "/Fish/static/media/halibut.15991420f52469a388eb.jpg",
     "static/media/salmon.jpg": "/Fish/static/media/salmon.e7cbf713530f505f67dd.jpg",
     "static/media/salmon-steak.jpg": "/Fish/static/media/salmon-steak.f94314f33d77786bf5e9.jpg",
@@ -15,11 +15,11 @@
     "static/media/mackerel.jpg": "/Fish/static/media/mackerel.ad4605b3fe181823fbb9.jpg",
     "static/media/tuna.jpg": "/Fish/static/media/tuna.17b0ff4532be14bc58b8.jpg",
     "index.html": "/Fish/index.html",
-    "main.138092a2.css.map": "/Fish/static/css/main.138092a2.css.map",
-    "main.c792ff3f.js.map": "/Fish/static/js/main.c792ff3f.js.map"
+    "main.c5aa7cb8.css.map": "/Fish/static/css/main.c5aa7cb8.css.map",
+    "main.5e1816ea.js.map": "/Fish/static/js/main.5e1816ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.138092a2.css",
-    "static/js/main.c792ff3f.js"
+    "static/css/main.c5aa7cb8.css",
+    "static/js/main.5e1816ea.js"
   ]
 }
