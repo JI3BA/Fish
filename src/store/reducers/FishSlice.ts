@@ -22,6 +22,7 @@ const initialState: FishState = {
         picture: salmon,
         price: 19.99,
         isCart: false,
+        amount: '1'
     },
     {
         id: 1,
@@ -31,6 +32,7 @@ const initialState: FishState = {
         picture: tuna,
         price: 24.99,
         isCart: false,
+        amount: '1'
     },
     {
         id: 2,
@@ -40,6 +42,7 @@ const initialState: FishState = {
         picture: pollock,
         price: 15.99,
         isCart: false,
+        amount: '1'
     },
     {
         id: 3,
@@ -49,6 +52,7 @@ const initialState: FishState = {
         picture: mackerel,
         price: 17,
         isCart: false,
+        amount: '1'
     },
     {
         id: 4,
@@ -58,6 +62,7 @@ const initialState: FishState = {
         picture: trout,
         price: 11.99,
         isCart: false,
+        amount: '1'
     },
     {
         id: 5,
@@ -67,6 +72,7 @@ const initialState: FishState = {
         picture: halibut,
         price: 26.99,
         isCart: false,
+        amount: '1'
     },
 ]}
 
@@ -74,9 +80,9 @@ export const FishSlice = createSlice({
     name: 'fish',
     initialState,
     reducers: {
-        // changeIsCart: (state, action: PayloadAction<boolean>): void => {
-        //     state.fish.find(item => item.isCart = !action.payload)
-        // }
+        changeIsCart: (state, action: PayloadAction<IFish>): void => {
+            state.fish.map(item => item.name === action.payload.name? item.isCart = !action.payload.isCart : null)
+        }
     }
 })
 

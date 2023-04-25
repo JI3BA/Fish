@@ -5,7 +5,6 @@ interface CartState {
     cart: IFish[]
 }
 
-
 const initialState: CartState = {
     cart: []
 }
@@ -17,6 +16,9 @@ export const CartSlice = createSlice({
         addFish: (state, action: PayloadAction<IFish>): void => {
             state.cart?.push(action.payload)
         },
+        changeAmount: (state, action: PayloadAction<string>): void => {
+            state.cart?.filter(item => item.amount = action.payload)
+        }
     }
 })
 

@@ -8,6 +8,8 @@ export interface Iinput {
     onBlur?: React.FocusEventHandler,
     onFocus?: React.FocusEventHandler,
     className: string,
+    max: number,
+    min: number
 }
 
 const Input = ({placeholder, value, name, ...rest}: Iinput) => {
