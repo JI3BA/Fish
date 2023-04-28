@@ -22,7 +22,9 @@ const initialState: FishState = {
         picture: salmon,
         price: 19.99,
         isCart: false,
-        amount: '1'
+        amount: 1,
+        minAmount: 1,
+        disabled: true,
     },
     {
         id: 1,
@@ -32,7 +34,9 @@ const initialState: FishState = {
         picture: tuna,
         price: 24.99,
         isCart: false,
-        amount: '1'
+        amount: 1,
+        minAmount: 1,
+        disabled: true,
     },
     {
         id: 2,
@@ -42,7 +46,9 @@ const initialState: FishState = {
         picture: pollock,
         price: 15.99,
         isCart: false,
-        amount: '1'
+        amount: 1,
+        minAmount: 1,
+        disabled: true,
     },
     {
         id: 3,
@@ -52,7 +58,9 @@ const initialState: FishState = {
         picture: mackerel,
         price: 17,
         isCart: false,
-        amount: '1'
+        amount: 1,
+        minAmount: 1,
+        disabled: true,
     },
     {
         id: 4,
@@ -62,7 +70,9 @@ const initialState: FishState = {
         picture: trout,
         price: 11.99,
         isCart: false,
-        amount: '1'
+        amount: 1,
+        minAmount: 1,
+        disabled: true,
     },
     {
         id: 5,
@@ -72,7 +82,9 @@ const initialState: FishState = {
         picture: halibut,
         price: 26.99,
         isCart: false,
-        amount: '1'
+        amount: 1,
+        minAmount: 1,
+        disabled: true,
     },
 ]}
 

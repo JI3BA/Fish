@@ -35,15 +35,6 @@ const Recipes: FC = () => {
                                             <h3 className='recipes__name'>{item.name}</h3>
                                             <p className="recipes__line"></p>
                                         </div>
-        
-                                        <div className="recipes__ingredients">
-                                            {item.ingredients.map((item,index) => {
-                                                return(
-                                                    <p className="ingredients__item" key={index}>{item};</p>
-                                                )
-                                            })}
-                                        </div>
-                                        <p className="recipes__time"><span style={{fontStyle: 'normal'}}>Cooking time: </span>{item.time}</p>
                                     </div>
                                 </div>
                                 )

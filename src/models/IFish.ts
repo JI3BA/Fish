@@ -6,5 +6,7 @@ export interface IFish {
     picture: string,
     price: number,
     isCart: boolean,
-    amount: string
+    amount: number,
+    minAmount: number,
+    disabled: boolean,
 }

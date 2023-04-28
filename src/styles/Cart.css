@@ -126,3 +126,8 @@
 .cart__make-order:active{
     transform: scale(.95);
 }
+
+.cart__total{
+    text-align: end;
+    padding: 10px 10px 10px 0;
+}
