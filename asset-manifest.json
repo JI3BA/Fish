@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Fish/static/css/main.c5aa7cb8.css",
-    "main.js": "/Fish/static/js/main.5e1816ea.js",
-    "static/media/halibut.jpg": "/Fish/static/media/halibut.15991420f52469a388eb.jpg",
-    "static/media/salmon.jpg": "/Fish/static/media/salmon.e7cbf713530f505f67dd.jpg",
+    "main.css": "/Fish/static/css/main.9e75b20c.css",
+    "main.js": "/Fish/static/js/main.9416be17.js",
+    "static/media/halibut.jpg": "/Fish/static/media/halibut.28d06c1d288c153a3060.jpg",
     "static/media/salmon-steak.jpg": "/Fish/static/media/salmon-steak.f94314f33d77786bf5e9.jpg",
     "static/media/cutlets-from-pollock.jpg": "/Fish/static/media/cutlets-from-pollock.ac260e84706cee498a73.jpg",
     "static/media/tuna-steak.jpg": "/Fish/static/media/tuna-steak.952086f4ec2399b3378b.jpg",
-    "static/media/pollock.jpg": "/Fish/static/media/pollock.d18a6ce2fd83f0da0612.jpg",
     "static/media/halibut-in-the-oven-in-foil.jpg": "/Fish/static/media/halibut-in-the-oven-in-foil.e8f3fa3b458c99c27ebe.jpg",
     "static/media/salted-trout.jpg": "/Fish/static/media/salted-trout.6ec28e13ab4781d9a4fc.jpg",
+    "static/media/salmon.jpg": "/Fish/static/media/salmon.d4436a8094e8a75c22f0.jpg",
     "static/media/salted-mackerel.jpg": "/Fish/static/media/salted-mackerel.a471ccdd0b7860ddb6ca.jpg",
-    "static/media/trout.jpg": "/Fish/static/media/trout.e3da510856ba266e0caf.jpg",
-    "static/media/mackerel.jpg": "/Fish/static/media/mackerel.ad4605b3fe181823fbb9.jpg",
-    "static/media/tuna.jpg": "/Fish/static/media/tuna.17b0ff4532be14bc58b8.jpg",
+    "static/media/pollock.jpg": "/Fish/static/media/pollock.a48b1dc4ce1966ad0674.jpg",
+    "static/media/trout.jpg": "/Fish/static/media/trout.9c11c6aa328a811c3b87.jpg",
+    "static/media/mackerel.jpg": "/Fish/static/media/mackerel.d31ccdcf3cc9e902808c.jpg",
+    "static/media/tuna.jpg": "/Fish/static/media/tuna.fd65b35b1bda39c0eb15.jpg",
     "index.html": "/Fish/index.html",
-    "main.c5aa7cb8.css.map": "/Fish/static/css/main.c5aa7cb8.css.map",
-    "main.5e1816ea.js.map": "/Fish/static/js/main.5e1816ea.js.map"
+    "main.9e75b20c.css.map": "/Fish/static/css/main.9e75b20c.css.map",
+    "main.9416be17.js.map": "/Fish/static/js/main.9416be17.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5aa7cb8.css",
-    "static/js/main.5e1816ea.js"
+    "static/css/main.9e75b20c.css",
+    "static/js/main.9416be17.js"
   ]
 }
