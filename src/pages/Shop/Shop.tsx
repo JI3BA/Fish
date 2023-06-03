@@ -1,8 +1,7 @@
-import { FC } from 'react'
-import Header from '../../component/Header/Header'
-import Main from '../../component/Main/Main'
+import { Header } from '../../component/Header/Header'
+import { Main } from '../../component/Main/Main'
 
-const Shop: FC = () => {
+export const Shop = () => {
     return(
         <>
             <Header />
@@ -10,5 +9,3 @@ const Shop: FC = () => {
         </>
     )
 }
-
-export default Shop

@@ -1,10 +1,9 @@
-import { FC } from "react";
-import Gallery from "../Gallery/Gallery";
-import Menu from "../Menu/Menu";
-import Recipes from "../Recipes/Recipes";
+import { Gallery } from "../Gallery/Gallery";
+import { Menu } from "../Menu/Menu";
+import { Recipes } from "../Recipes/Recipes";
 import '../../styles/Main.css'
 
-const Main: FC = () => {
+export const Main = () => {
     return(
         <>
             <div className="main">
@@ -17,5 +16,3 @@ const Main: FC = () => {
         </>
     )
 }
-
-export default Main

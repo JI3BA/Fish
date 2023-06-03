@@ -1,14 +1,13 @@
-import { FC } from 'react'
 import { useAppSelector, useAppDispatch } from '../../hooks/redux'
 import { CartSlice } from '../../store/reducers/CartSlice'
-import Button from '../Button/Button'
+import { Button } from '../Button/Button'
 import '../../styles/Menu.css'
 import '../../styles/Main.css'
 import { IFish } from '../../models/IFish'
 import { Link } from 'react-router-dom'
 import { FishSlice } from '../../store/reducers/FishSlice'
 
-const Menu: FC = () => {
+export const Menu = () => {
     const fishMenu = useAppSelector(state => state.FishSlice.fish)
     const cart = useAppSelector(state => state.CartSlice.cart)
     const dispatch = useAppDispatch()
@@ -64,5 +63,3 @@ const Menu: FC = () => {
         </div>
     )
 }
-
-export default Menu

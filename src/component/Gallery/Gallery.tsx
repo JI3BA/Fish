@@ -1,16 +1,12 @@
-import { FC, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import '../../styles/Gallery.css';
 import '../../styles/Button.css';
 import '../../styles/Main.css';
 import { useAppSelector } from "../../hooks/redux";
-import Button from "../Button/Button";
+import { Button } from "../Button/Button";
 import { CSSTransition } from "react-transition-group";
 
-
-
-
-
-const Gallery: FC = () => {
+export const Gallery = () => {
     const fishImage = useAppSelector(state => state.FishSlice.fish)
 
     const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -57,5 +53,3 @@ const Gallery: FC = () => {
             </div>
     )
 }
-
-export default Gallery

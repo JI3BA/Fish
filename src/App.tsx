@@ -1,13 +1,13 @@
 import { Provider } from 'react-redux';
 import { setupStore } from './store';
 import './App.css';
-import Shop from './pages/Shop/Shop';
+import { Shop } from './pages/Shop/Shop';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Cart from './pages/Cart/Cart';
+import { Cart } from './pages/Cart/Cart';
 
 const store = setupStore()
 
-function App() {
+export const App = () => {
   return (
     <Provider store={store}>
       <Routes>
@@ -18,5 +18,3 @@ function App() {
     </Provider>
   )
 }
-
-export default App;

@@ -12,10 +12,8 @@ export interface Iinput {
     min: number
 }
 
-const Input = ({placeholder, value, name, ...rest}: Iinput) => {
+export const Input = ({placeholder, value, name, ...rest}: Iinput) => {
     return(
             <input type='number' placeholder={placeholder} value={value} name={name} {...rest}/>
     )
 }
-
-export default Input

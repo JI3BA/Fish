@@ -1,13 +1,13 @@
-import { FC, ChangeEvent, useState, useEffect } from 'react'
+import { ChangeEvent, useState, useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
-import Input from '../../component/Input/Input'
+import { Input } from '../../component/Input/Input'
 import { Link } from 'react-router-dom'
 import '../../styles/Cart.css'
-import Button from '../../component/Button/Button'
+import { Button } from '../../component/Button/Button'
 import { CartSlice } from '../../store/reducers/CartSlice'
 import { IFish } from '../../models/IFish'
 
-const Cart: FC = () => {
+export const Cart = () => {
     const cart = useAppSelector(state => state.CartSlice.cart)
     const dispatch = useAppDispatch()
     const { changeAmount, disabledAmount } = CartSlice.actions
@@ -67,6 +67,3 @@ const Cart: FC = () => {
         </div>
     )
 }
-
-
-export default Cart

@@ -1,12 +1,12 @@
-import {useRef, MouseEvent} from "react";
+import { useRef, MouseEvent } from "react";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { isModal } from "../../../store/reducers/ModalSlice";
-import Button from "../../Button/Button";
+import { Button } from "../../Button/Button";
 import '../../../styles/ModalRecipes.css';
 import { CSSTransition } from "react-transition-group";
 
 
-const ModalRecipes = () => {
+export const ModalRecipes = () => {
     const recipeFish = useAppSelector(state => state.ModalRecipesSlice.recipe)
     const modal = useAppSelector(state => state.ModalSlice.isModal)
     const dispatch = useAppDispatch()
@@ -40,5 +40,3 @@ const ModalRecipes = () => {
         
     )
 }
-
-export default ModalRecipes

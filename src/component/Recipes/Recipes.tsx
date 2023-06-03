@@ -1,4 +1,3 @@
-import { FC } from "react";
 import '../../styles/Recipes.css'
 import '../../styles/Menu.css'
 import '../../styles/ModalRecipes.css'
@@ -6,9 +5,9 @@ import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { isModal } from "../../store/reducers/ModalSlice";
 import { IRecipes } from "../../models/IRecipes";
 import { ModalRecipesSlice } from "../../store/reducers/ModalRecipesSlice";
-import ModalRecipes from "../Modal/ModalRecipes/ModalRecipes";
+import { ModalRecipes } from "../Modal/ModalRecipes/ModalRecipes";
 
-const Recipes: FC = () => {
+export const Recipes = () => {
     const recipesFish = useAppSelector(state => state.RecipesSlice.recipes)
     const dispatch = useAppDispatch()
     const { openModal } = isModal.actions
@@ -46,5 +45,3 @@ const Recipes: FC = () => {
         </>
     )
 }
-
-export default Recipes
