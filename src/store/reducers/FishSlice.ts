@@ -7,8 +7,6 @@ import mackerel from '../../images/mackerel.jpg';
 import trout from '../../images/trout.jpg';
 import halibut from '../../images/halibut.jpg';
 
-
-
 interface FishState {
     fish: IFish[]
 }
@@ -93,7 +91,7 @@ export const FishSlice = createSlice({
     initialState,
     reducers: {
         changeIsCart: (state, action: PayloadAction<IFish>): void => {
-            state.fish.map(item => item.name === action.payload.name? item.isCart = !action.payload.isCart : null)
+            state['fish'].map(item => item.name === action.payload.name? item.isCart = !action.payload.isCart : null)
         }
     }
 })
