@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom'
 import { FishSlice } from '../../store/reducers/FishSlice'
 
 export const Menu = () => {
-    const fishMenu = useAppSelector(state => state.FishSlice.fish)
-    const cart = useAppSelector(state => state.CartSlice.cart)
+    const fishMenu = useAppSelector(state => state['FishSlice'].fish)
+    const cart = useAppSelector(state => state['CartSlice'].cart)
     const dispatch = useAppDispatch()
     const { addFish } = CartSlice.actions
     const { changeIsCart } = FishSlice.actions
@@ -32,8 +32,9 @@ export const Menu = () => {
                                     <h3 className='menu__name'>{item.name}</h3>
                                     <p className="menu__text menu__weight">weight: <span className='menu__text--bold'>{item.weight}g</span></p>
                                     <p className="menu__text menu__price">price: <span className='menu__text--bold'>{item.price}$</span></p>
-                                    {!item.isCart ? <Button className='menu__text menu__button' onClick={() => addInOrder(item)}>Add to Cart</Button>
-                                            : <Button className='menu__text menu__button' >In Cart</Button>
+                                    {!item.isCart
+                                        ? <Button className='menu__text menu__button' onClick={() => addInOrder(item)}>Add to Cart</Button>
+                                        : <Button className='menu__text menu__button' >In Cart</Button>
                                     }
                                 </div>
                             </div>
