@@ -8,7 +8,7 @@ import { CartSlice } from '../../store/reducers/CartSlice'
 import { IFish } from '../../models/IFish'
 
 export const Cart = () => {
-    const cart = useAppSelector(state => state.CartSlice.cart)
+    const cart = useAppSelector(state => state['CartSlice'].cart)
     const dispatch = useAppDispatch()
     const { changeAmount, disabledAmount } = CartSlice.actions
     const [total, setTotal] = useState<string>('0')
