@@ -18,11 +18,17 @@ export const CartSlice = createSlice({
         },
         changeAmount: (state, action: PayloadAction<Omit<IFish, 'id' | 'description' | 'weight'
         | 'picture' | 'price' | 'isCart' | 'minAmount' | 'disabled'>>): void => {
-            state['cart']?.map(item => item.name === action.payload.name ? item.amount = action.payload.amount : item)
+            state['cart']?.map(item => item.name === action.payload.name
+                ? item.amount = action.payload.amount
+                : item)
         },
         disabledAmount: (state, action: PayloadAction<Omit<IFish, 'id' | 'description' | 'weight'
         | 'picture' | 'price' | 'minAmount' | 'isCart' >>): void => {
-            state['cart']?.map(item => item.name !== action.payload.name ? item : (item.minAmount === action.payload.amount) ? item.disabled = true : item.disabled = false)
+            state['cart']?.map(item => item.name !== action.payload.name
+                ? item
+                : (item.minAmount === action.payload.amount)
+                    ? item.disabled = true
+                    : item.disabled = false)
         }
     }
 })
