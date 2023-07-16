@@ -11,11 +11,16 @@ export const Menu = () => {
     const fishMenu = useAppSelector(state => state['FishSlice'].fish)
     const cart = useAppSelector(state => state['CartSlice'].cart)
     const dispatch = useAppDispatch()
-    const { addFish } = CartSlice.actions
+    const { addFish, removeFish } = CartSlice.actions
     const { changeIsCart } = FishSlice.actions
 
     const addInOrder = (item: IFish): void => {
         dispatch(addFish(item))
+        dispatch(changeIsCart(item))
+    }
+
+    const removeFromOrder = (item: IFish): void => {
+        dispatch(removeFish(item))
         dispatch(changeIsCart(item))
     }
 
@@ -34,7 +39,7 @@ export const Menu = () => {
                                     <p className="menu__text menu__price">price: <span className='menu__text--bold'>{item.price}$</span></p>
                                     {!item.isCart
                                         ? <Button className='menu__text menu__button' onClick={() => addInOrder(item)}>Add to Cart</Button>
-                                        : <Button className='menu__text menu__button' >In Cart</Button>
+                                        : <Button className='menu__text menu__button' onClick={() => removeFromOrder(item)}>In Cart</Button>
                                     }
                                 </div>
                             </div>
