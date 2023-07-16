@@ -21,7 +21,7 @@ export const Recipes = () => {
 
     return(
         <>
-            <div className="recipes">
+            <div id="recipes" className="recipes">
                 <div className="recipes__container wrapper">
                     <h1 className="title__component recipes__title">Recipes</h1>
                     <div className='card__container'>
