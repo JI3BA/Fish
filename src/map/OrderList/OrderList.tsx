@@ -9,6 +9,7 @@ import {FishSlice} from "../../store/reducers/FishSlice";
 
 export const OrderList = () => {
     const cart = useAppSelector(state => state['CartSlice'].cart)
+    const fishMenu = useAppSelector(state => state['FishSlice'].fish)
     const dispatch = useAppDispatch()
     const { changeAmount, removeFish } = CartSlice.actions
     const { changeIsCart } = FishSlice.actions
@@ -23,7 +24,7 @@ export const OrderList = () => {
 
     const removeFromOrder = (item: IFish): void => {
         dispatch(removeFish(item))
-        dispatch(changeIsCart(item))
+        fishMenu.map(fish => fish.name === item.name ? dispatch(changeIsCart(fish)) : null)
     }
 
     return (
