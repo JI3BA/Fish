@@ -91,7 +91,9 @@ export const FishSlice = createSlice({
     initialState,
     reducers: {
         changeIsCart: (state, action: PayloadAction<IFish>): void => {
-            state['fish'].map(item => item.name === action.payload.name? item.isCart = !action.payload.isCart : null)
+            state['fish'].map(item => item.name === action.payload.name
+                ? item.isCart = !action.payload.isCart
+                : null)
         }
     }
 })
