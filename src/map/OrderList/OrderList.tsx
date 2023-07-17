@@ -42,7 +42,7 @@ export const OrderList = () => {
                                 <Input placeholder='amount' className='cart__input' value={(item.amount).toString()} max={999} min={1} onChange={(e: ChangeEvent<HTMLInputElement>) => dispatch(changeAmount({name:item.name, amount: Number(e.target.value)}))}/>
                                 <Button className='cart__amount-button amount__plus' onClick={() => plusBtn(item)}>+</Button>
                             </div>
-                            <Button className='' onClick={() => removeFromOrder(item)}>Remove</Button>
+                            <Button className='menu__text menu__button' onClick={() => removeFromOrder(item)}>Remove</Button>
                             <p className="cart__text cart__price">Price: <span style={{fontWeight: 700, fontStyle: 'italic'}}>{item.price}$</span></p>
                         </div>
                     </div>
