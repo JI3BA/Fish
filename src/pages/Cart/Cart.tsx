@@ -5,12 +5,16 @@ import '../../styles/Cart.css'
 import { Button } from '../../component/Button/Button'
 import { CartSlice } from '../../store/reducers/CartSlice'
 import {OrderList} from "../../map/OrderList/OrderList";
+import {SalesReceipt} from "../../component/SalesReceipt/SalesReceipt";
+import {isModal} from "../../store/reducers/ModalSlice";
 
 export const Cart = () => {
     const cart = useAppSelector(state => state['CartSlice'].cart)
     const dispatch = useAppDispatch()
     const { disabledAmount } = CartSlice.actions
     const [total, setTotal] = useState<string>('0')
+    const [openOrderList, setOpenOrderList] = useState<boolean>(false)
+    const { openOrder } = isModal.actions
 
     useEffect(() => {
         const delayTotal = setTimeout(() => setTotal(cart.reduce((acc,item) => (acc + item.price * Number(item.amount)), 0).toFixed(2)), 1000)
@@ -22,23 +26,32 @@ export const Cart = () => {
         cart.map(item => dispatch(disabledAmount({name: item.name, amount: item.amount, disabled: item.disabled})))
     }, [cart, dispatch, disabledAmount])
 
+    const makeAnOrder = () => {
+        dispatch(openOrder())
+        setOpenOrderList(true)
+    }
+
     return(
-        <div className='cart'>
-            <div className="cart__container wrapper">
-                <h1 className='cart__name'>Order</h1>
+        <>
+            <div className='cart'>
+                <div className="cart__container wrapper">
+                    <h1 className='cart__name'>Order</h1>
 
-                {!cart.length
-                    ? <h2 className='cart__name'>Cart is empty</h2>
-                    :
-                    <>
-                        <OrderList />
-                        <h3 className="cart__text cart__total">Total: <span style={{fontWeight: 700, fontStyle: 'italic'}}>{total}$</span></h3>
-                        <Button className='cart__make-order'>Make an Order</Button>
-                    </>
-                }
+                    {!cart.length
+                        ? <h2 className='cart__name'>Cart is empty</h2>
+                        :
+                        <>
+                            <OrderList />
+                            <h3 className="cart__text cart__total">Total: <span style={{fontWeight: 700, fontStyle: 'italic'}}>{total}$</span></h3>
+                            <Button className='cart__make-order' onClick={makeAnOrder}>Make an Order</Button>
+                        </>
+                    }
 
-                <Link to='/Fish' className="cart__callback-link">Menu</Link>
+                    <Link to='/Fish' className="cart__callback-link">Menu</Link>
+                </div>
             </div>
-        </div>
+
+            <SalesReceipt total={total} openOrderList={openOrderList}/>
+        </>
     )
 }
