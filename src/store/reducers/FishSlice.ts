@@ -94,6 +94,9 @@ export const FishSlice = createSlice({
             state['fish'].map(item => item.name === action.payload.name
                 ? item.isCart = !action.payload.isCart
                 : null)
+        },
+        resetAllIsCartState: (state): void => {
+            state['fish'].map(item => item.isCart = false)
         }
     }
 })
