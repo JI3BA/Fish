@@ -32,6 +32,9 @@ export const CartSlice = createSlice({
                 : (item.minAmount === action.payload.amount)
                     ? item.disabled
                     : !item.disabled)
+        },
+        clearCart: (state) => {
+            state['cart'].splice(0)
         }
     }
 })
