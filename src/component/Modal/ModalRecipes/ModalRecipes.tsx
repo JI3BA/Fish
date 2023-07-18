@@ -15,7 +15,6 @@ export const ModalRecipes = () => {
 
     return(
         <CSSTransition in={modal} classNames='modal' timeout={1000} unmountOnExit nodeRef={nodeRef}>
-            <>
                 <div className="modal" ref={nodeRef} onClick={() => dispatch(closeModal())}>
                     {recipeFish && <div className="modal__container" onClick={(e: MouseEvent<HTMLDivElement>) => e.stopPropagation()}>
                             <img src={recipeFish[0].picture} className='modal__picture recipes__picture' alt={recipeFish[0].name}/>
@@ -35,7 +34,6 @@ export const ModalRecipes = () => {
                         </div>
                     }
                 </div>
-            </>
         </CSSTransition>
         
     )
