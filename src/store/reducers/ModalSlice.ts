@@ -1,11 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface ModalState {
-    isModal: boolean
+    isModal: boolean,
+    isOrder: boolean
 }
 
 const initialState: ModalState = {
-    isModal: false
+    isModal: false,
+    isOrder: false
 }
 
 export const isModal = createSlice({
@@ -17,7 +19,13 @@ export const isModal = createSlice({
         },
         closeModal: (state): void => {
             state.isModal = false
-        }
+        },
+        openOrder: (state): void => {
+            state.isOrder = true
+        },
+        closeOrder: (state): void => {
+            state.isOrder = false
+        },
     }
 })
 
