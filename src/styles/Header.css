@@ -36,6 +36,14 @@ a svg .header__logo{
     transition: 0.5s;
 }
 
-a:hover svg .header__logo{
+svg{
+    transition: .3s;
+}
+
+a:hover .header__logo{
     stroke: #888888;
+}
+
+a:hover > svg{
+    filter: drop-shadow(0 2px 2px #888888);
 }
