@@ -1,18 +1,20 @@
-export interface Iinput {
+import {ChangeEventHandler, FocusEventHandler, KeyboardEventHandler} from "react";
+
+export interface IInput {
     placeholder: string,
     value: string,
     name?: string,
-    onChange: React.ChangeEventHandler,
-    onKeyDown?: React.KeyboardEventHandler,
-    onKeyUp?: React.KeyboardEventHandler,
-    onBlur?: React.FocusEventHandler,
-    onFocus?: React.FocusEventHandler,
+    onChange: ChangeEventHandler,
+    onKeyDown?: KeyboardEventHandler,
+    onKeyUp?: KeyboardEventHandler,
+    onBlur?: FocusEventHandler,
+    onFocus?: FocusEventHandler,
     className: string,
     max: number,
     min: number
 }
 
-export const Input = ({placeholder, value, name, ...rest}: Iinput) => {
+export const Input = ({placeholder, value, name, ...rest}: IInput) => {
     return(
             <input type='number' placeholder={placeholder} value={value} name={name} {...rest}/>
     )
