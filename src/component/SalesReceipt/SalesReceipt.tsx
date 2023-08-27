@@ -7,6 +7,7 @@ import {CSSTransition} from "react-transition-group";
 import {isModal} from "../../store/reducers/ModalSlice";
 import {CartSlice} from "../../store/reducers/CartSlice";
 import {FishSlice} from "../../store/reducers/FishSlice";
+import {MapSalesReceipt} from "../../map/SalesReceipt/MapSalesReceipt";
 
 type SalesReceiptType = {
     total: string,
@@ -36,21 +37,7 @@ export const SalesReceipt: FC<SalesReceiptType> = ({total, openOrderList}) => {
                        <h2 className="check__title">Sales Receipt</h2>
 
                        <div className='products'>
-                           {cart.map(fish => {
-                               return (
-                                   <div className='product' key={fish.id}>
-                                       <span className="product__name">
-                                           <span className="product__title">fish: </span>
-                                           {fish.name}
-                                       </span>
-                                       <span className="product__amount">
-                                           <span className="product__title">amount: </span>
-                                           {fish.amount}
-                                       </span>
-                                   </div>
-                               )
-                           })
-                           }
+                           <MapSalesReceipt cart={cart} />
                        </div>
 
                        <span className="check__price">
