@@ -7,7 +7,7 @@ import { Button } from "../Button/Button";
 import { CSSTransition } from "react-transition-group";
 
 export const Gallery = () => {
-    const fishImage = useAppSelector(state => state.FishSlice.fish)
+    const fishImage = useAppSelector(state => state['FishSlice'].fish)
 
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const [changeSlide, setChangeSlide] = useState<boolean>(false)
