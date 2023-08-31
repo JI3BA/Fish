@@ -14,7 +14,9 @@ export const FishMenu: FC<FishMenuType> = ({fishMenu, addInOrder, removeFromOrde
             {fishMenu.map((item,index) => {
                 return(
                     <div className='menu__card' key={index}>
-                        <img src={item.picture} className='menu__picture' alt={item.name}/>
+                        <div className="title">
+                            <img src={item.picture} className='title__picture' alt={item.name}/>
+                        </div>
                         <div className="menu__description">
                             <h3 className='menu__name'>{item.name}</h3>
                             <p className="menu__text menu__weight">weight: <span className='menu__text--bold'>{item.weight}g</span></p>
