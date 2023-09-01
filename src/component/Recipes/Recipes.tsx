@@ -6,6 +6,7 @@ import { isModal } from "../../store/reducers/ModalSlice";
 import { IRecipes } from "../../models/IRecipes";
 import { ModalRecipesSlice } from "../../store/reducers/ModalRecipesSlice";
 import { ModalRecipes } from "../Modal/ModalRecipes/ModalRecipes";
+import {MapRecipes} from "../../map/Recipes/MapRecipes";
 
 export const Recipes = () => {
     const recipesFish = useAppSelector(state => state.RecipesSlice.recipes)
@@ -25,19 +26,7 @@ export const Recipes = () => {
                 <div className="recipes__container wrapper">
                     <h1 className="title__component recipes__title">Recipes</h1>
                     <div className='card__container'>
-                        {recipesFish.map((item,index) => {
-                            return(
-                                <div className='recipes__card' key={index} onClick={() => addModalRecipe(index)}>
-                                    <img src={item.picture} className='recipes__picture' alt={item.name}/>
-                                    <div className="recipes__description">
-                                        <div className="recipes__title">
-                                            <h3 className='recipes__name'>{item.name}</h3>
-                                            <p className="recipes__line"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                )
-                            })}
+                        <MapRecipes recipesFish={recipesFish} addModalRecipe={addModalRecipe} />
                         </div>
                 </div>
             </div>
