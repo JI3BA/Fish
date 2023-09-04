@@ -1,0 +1,36 @@
+.recipe{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.preview__image{
+    max-width: 100%;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.preview__name{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.step{
+    max-width: 100%;
+    width: 100%;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.step__title{
+    font-size: 32px;
+    font-weight: 700;
+}
+
