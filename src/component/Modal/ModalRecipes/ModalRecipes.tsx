@@ -4,6 +4,7 @@ import { isModal } from "../../../store/reducers/ModalSlice";
 import { Button } from "../../Button/Button";
 import '../../../styles/ModalRecipes.css';
 import { CSSTransition } from "react-transition-group";
+import {Link} from "react-router-dom";
 
 
 export const ModalRecipes = () => {
@@ -29,6 +30,7 @@ export const ModalRecipes = () => {
                                 </div>
                                 <p className="modal__time recipes__time"><span style={{fontStyle: 'normal'}}>Cooking time: </span>{recipeFish[0].time}</p>
                                 <Button className='modal__close' onClick={() => dispatch(closeModal())}>Close</Button>
+                                <Link to='/recipe' className="modal__close modal--open-recipe">Open recipe</Link>
                                 <p className="modal__close--cross" onClick={() => dispatch(closeModal())}>✖</p>
                             </div>
                         </div>
