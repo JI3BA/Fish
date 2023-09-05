@@ -2,6 +2,7 @@ import { Gallery } from "../Gallery/Gallery";
 import { Menu } from "../Menu/Menu";
 import { Recipes } from "../Recipes/Recipes";
 import '../../styles/Main.css'
+import {Contacts} from "../Сontacts/Contacts";
 
 export const Main = () => {
     return(
@@ -11,6 +12,7 @@ export const Main = () => {
                         <Gallery />
                         <Menu />
                         <Recipes />
+                        <Contacts />
                     </div>  
             </div>
         </>
