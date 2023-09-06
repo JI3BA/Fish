@@ -1,0 +1,17 @@
+.footer{
+    max-width: 100%;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #061068;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__navigation{
+    align-items: center;
+}
+
+.footer__link{
+    font-size: 16px;
+}
