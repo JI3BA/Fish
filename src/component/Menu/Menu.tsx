@@ -5,7 +5,7 @@ import '../../styles/Main.css'
 import { IFish } from '../../models/IFish'
 import { Link } from 'react-router-dom'
 import { FishSlice } from '../../store/reducers/FishSlice'
-import {FishMenu} from "../../map/FishMenu/FishMenu";
+import { FishMenu } from "../../map/FishMenu/FishMenu";
 
 export const Menu = () => {
     const fishMenu = useAppSelector(state => state['FishSlice'].fish)
