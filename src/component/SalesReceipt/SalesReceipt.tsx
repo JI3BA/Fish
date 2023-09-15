@@ -1,13 +1,13 @@
-import {useAppDispatch, useAppSelector} from "../../hooks/redux";
-import {Link} from "react-router-dom";
-import {Button} from "../Button/Button";
+import { useAppDispatch, useAppSelector } from "../../hooks/redux";
+import { Link } from "react-router-dom";
+import { Button } from "../Button/Button";
 import '../../styles/SalesReceipt.css'
-import {FC, useRef, MouseEvent} from "react";
-import {CSSTransition} from "react-transition-group";
-import {isModal} from "../../store/reducers/ModalSlice";
-import {CartSlice} from "../../store/reducers/CartSlice";
-import {FishSlice} from "../../store/reducers/FishSlice";
-import {MapSalesReceipt} from "../../map/SalesReceipt/MapSalesReceipt";
+import { FC, useRef, MouseEvent } from "react";
+import { CSSTransition } from "react-transition-group";
+import { isModal } from "../../store/reducers/ModalSlice";
+import { CartSlice } from "../../store/reducers/CartSlice";
+import { FishSlice } from "../../store/reducers/FishSlice";
+import { MapSalesReceipt } from "../../map/SalesReceipt/MapSalesReceipt";
 
 type SalesReceiptType = {
     total: string,
