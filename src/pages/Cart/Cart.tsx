@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import '../../styles/Cart.css'
 import { Button } from '../../component/Button/Button'
 import { CartSlice } from '../../store/reducers/CartSlice'
-import {OrderList} from "../../map/OrderList/OrderList";
-import {SalesReceipt} from "../../component/SalesReceipt/SalesReceipt";
-import {isModal} from "../../store/reducers/ModalSlice";
+import { OrderList } from "../../map/OrderList/OrderList";
+import { SalesReceipt } from "../../component/SalesReceipt/SalesReceipt";
+import { isModal } from "../../store/reducers/ModalSlice";
 
 export const Cart = () => {
     const cart = useAppSelector(state => state['CartSlice'].cart)
