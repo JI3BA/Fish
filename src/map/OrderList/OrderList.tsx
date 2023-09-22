@@ -1,10 +1,10 @@
-import {useAppDispatch, useAppSelector} from "../../hooks/redux";
-import {Button} from "../../component/Button/Button";
-import {Input} from "../../component/Input/Input";
-import {ChangeEvent} from "react";
-import {CartSlice} from "../../store/reducers/CartSlice";
-import {IFish} from "../../models/IFish";
-import {FishSlice} from "../../store/reducers/FishSlice";
+import { useAppDispatch, useAppSelector } from "../../hooks/redux";
+import { Button } from "../../component/Button/Button";
+import { Input } from "../../component/Input/Input";
+import { ChangeEvent } from "react";
+import { CartSlice } from "../../store/reducers/CartSlice";
+import { IFish } from "../../models/IFish";
+import { FishSlice } from "../../store/reducers/FishSlice";
 
 
 export const OrderList = () => {
