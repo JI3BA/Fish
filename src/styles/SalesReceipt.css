@@ -50,11 +50,16 @@
     z-index: 2;
     cursor: default;
     overflow: hidden;
+    transition: box-shadow .5s;
+}
+
+.check__container:hover{
+    box-shadow: 0 0 7px 7px #595959;
 }
 
 .check__title{
     font-weight: 700;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .products{
@@ -79,7 +84,7 @@
     padding: 5px 0;
     font-weight: 500;
     font-style: italic;
-    font-size: 26px;
+    font-size: 28px;
 }
 
 .check__button{
