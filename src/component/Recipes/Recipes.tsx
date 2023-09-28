@@ -6,7 +6,7 @@ import { isModal } from "../../store/reducers/ModalSlice";
 import { IRecipes } from "../../models/IRecipes";
 import { ModalRecipesSlice } from "../../store/reducers/ModalRecipesSlice";
 import { ModalRecipes } from "../Modal/ModalRecipes/ModalRecipes";
-import {MapRecipes} from "../../map/Recipes/MapRecipes";
+import { MapRecipes } from "../../map/Recipes/MapRecipes";
 
 export const Recipes = () => {
     const recipesFish = useAppSelector(state => state.RecipesSlice.recipes)
