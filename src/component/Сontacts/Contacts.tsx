@@ -6,7 +6,9 @@ export const Contacts = () => {
             <div className="contacts__container wrapper">
                 <h1 className="title__component contacts__title">Contacts</h1>
                 <div className="content">
-                    <div className="map"></div>
+                    <div className="map-container">
+                        <iframe src="https://yandex.by/map-widget/v1/?ll=27.555691%2C53.902735&z=12" className='map' title='map'></iframe>
+                    </div>
                     <div className="info">
                         <p className="info__text info__text--address"><span className='info__text--title'>Address:</span> XXXXXXXXXXX</p>
                         <p className="info__text info__text--phone"><span className='info__text--title'>Phone:</span> XXX-(XX)-XXX-XX-XX</p>
